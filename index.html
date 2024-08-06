@@ -1,172 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trump.tv - Donald J. Trump Addresses the Nation</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <main>
-        <section>
-            <header>
-                <nav class="navbar">
-                    
-                        <div style="display: flex;justify-content: space-between;align-items: center;padding: 0px 20px;">
-                            <div class="navbar-logo">
-                                <a href="#"><img src="./assets/images/logo.svg" alt="logo"></a>
-                            </div>
-                            <ul class="navbar-menu">
-                                <li><a href="#">The 45th Presidency</a></li>
-                                <li><a href="#">Facts First</a></li>
-                                <li><a href="#">2022 Midterms</a></li>
-                                <li><a href="#">Trump Indictment</a></li>
-                            </ul>
-                            <div>
-                                <ul>
-                                    <a href="#"><li class="nav_btn">Trump Indictment <img src="./assets/images/arrow.svg" alt="arrow"></li></a>
-                                </ul>
-                                
-                            </div>
-                        </div>
-                  
-                    
-                </nav>
-            </header>
-            
-        </section>
-
-        <section class="hero">
-            <div class="hero-content">
-                <div class="video-player" id="videoPlayer">
-                    <video id="myVideo" poster="./assets/images/video_poster.png" controls>
-                        <source id="videoSource" src="./assets/images/Vidio1.mp4" type="video/mp4">
-                    </video>
-                    <button class="play-button" id="playButton">▶</button>
-                </div>
-                <div class="her__con">
-                    <h1>Donald J. Trump Addresses the Nation</h1>
-                    <p style="padding-top: 15px;">President Donald Trump has released a video condemning the violent insurrection he fomented at the Capitol last week.</p>
-                    <p style="padding-top: 15px;">The video was released after he was impeached by the House for a record second time, this time with Republican votes. Trump also called on his supporters to remain peaceful amid concerns about additional violence in the days before President-elect Joe Biden's inauguration.</p>
-                </div>
+      <section>
+        <header>
+          <nav class="navbar">
+            <div
+              class="fl_wrap"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 20px;
+              "
+            >
+              <div class="navbar-logo">
+                <a href="#"
+                  ><img
+                    src="https://s3.amazonaws.com/trumptv/testvideo/logo.svg"
+                    alt="logo"
+                /></a>
+              </div>
+              <ul class="navbar-menu">
+                <li><a href="#">The 45th Presidency</a></li>
+                <li><a href="#">Facts First</a></li>
+                <li><a href="#">2022 Midterms</a></li>
+                <li><a href="#">Trump Indictment</a></li>
+              </ul>
+              <div>
+                <ul>
+                  <a href="#"
+                    ><li class="nav_btn">
+                      Trump Indictment
+                      <img
+                        src="https://s3.amazonaws.com/trumptv/testvideo/arrow.svg"
+                        alt="arrow"
+                      /></li
+                  ></a>
+                </ul>
+              </div>
             </div>
-        </section>
+          </nav>
+        </header>
+      </section>
 
-        <section class="video-gallery" >
-            <div class="gallery-container" style="position: relative;">
-                <button class="slider-button prev" id="prevBtn"></button>
-                <div class="slider-wrapper">
-                    <div class="mini_wraper">
-                    <div class="wrapper_main">
-                       
-                            <div class="slider" id="slider">
-                                <img src="./assets/images/slide1.png" alt="Video 1" data-video="./assets/images/Vidio1.mp4">
-                                <img src="./assets/images/slide2.png" alt="Video 2" data-video="./assets/images/video2.mp4">
-                                <img src="./assets/images/slide3.png" alt="Video 3" data-video="./assets/images/video3.mp4">
-                                <img src="./assets/images/slide1.png" alt="Video 4" data-video="./assets/images/video4.mp4">
-                                <!-- <img src="./assets/images/slide2.png" alt="Video 2" data-video="./assets/images/video2.mp4"> -->
-                                <!-- <img src="./assets/images/slide3.png" alt="Video 3" data-video="./assets/images/video3.mp4"> -->
-                                <!-- <img src="./assets/images/slide1.png" alt="Video 4" data-video="./assets/images/video4.mp4"> -->
-                            </div>
-                        </div>
-                        
-                    </div>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="video-player" id="videoPlayer">
+            <video
+              id="myVideo"
+              poster="https://s3.amazonaws.com/trumptv/testvideo/video_poster.png"
+              controls
+            >
+              <source
+                id="videoSource"
+                src="https://s3.amazonaws.com/trumptv/testvideo/Vidio1.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <button class="play-button" id="playButton">▶</button>
+          </div>
+          <div class="her__con">
+            <h1>Donald J. Trump Addresses the Nation</h1>
+            <p style="padding-top: 15px">
+              President Donald Trump has released a video condemning the violent
+              insurrection he fomented at the Capitol last week.
+            </p>
+            <p style="padding-top: 15px">
+              The video was released after he was impeached by the House for a
+              record second time, this time with Republican votes. Trump also
+              called on his supporters to remain peaceful amid concerns about
+              additional violence in the days before President-elect Joe Biden's
+              inauguration.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-gallery" id="videoGallery">
+        <div class="gallery-container" style="position: relative">
+          <button class="slider-button prev" id="prevBtn"></button>
+          <div class="slider-wrapper">
+            <div class="mini_wraper">
+              <div class="wrapper_main">
+                <div class="slider" id="slider">
+                  <img
+                    src="https://s3.amazonaws.com/trumptv/testvideo/slide1.png"
+                    alt="Video 1"
+                    data-video="https://s3.amazonaws.com/trumptv/testvideo/Vidio1.mp4"
+                  />
+                  <img
+                    src="https://s3.amazonaws.com/trumptv/testvideo/slide2.png"
+                    alt="Video 2"
+                    data-video="https://s3.amazonaws.com/trumptv/testvideo/video2.mp4"
+                  />
+                  <img
+                    src="https://s3.amazonaws.com/trumptv/testvideo/slide3.png"
+                    alt="Video 3"
+                    data-video="https://s3.amazonaws.com/trumptv/testvideo/video3.mp4"
+                  />
+                  <img
+                    src="https://s3.amazonaws.com/trumptv/testvideo/slide1.png"
+                    alt="Video 4"
+                    data-video="https://s3.amazonaws.com/trumptv/testvideo/video4.mp4"
+                  />
+                  <img
+                    src="https://s3.amazonaws.com/trumptv/testvideo/slide2.png"
+                    alt="Video 2"
+                    data-video="https://s3.amazonaws.com/trumptv/testvideo/video2.mp4"
+                  />
+                  <img
+                    src="https://s3.amazonaws.com/trumptv/testvideo/slide3.png"
+                    alt="Video 3"
+                    data-video="https://s3.amazonaws.com/trumptv/testvideo/video3.mp4"
+                  />
+                  <img
+                    src="https://s3.amazonaws.com/trumptv/testvideo/slide1.png"
+                    alt="Video 4"
+                    data-video="https://s3.amazonaws.com/trumptv/testvideo/video4.mp4"
+                  />
                 </div>
-               
-                <button class="slider-button next" id="nextBtn"></button>
+              </div>
             </div>
-        </section>
-        
-        <footer>
-            <p>This site is not affiliated with or operated by the Trump Organization or ex-"President" &nbsp; Donald J.Trump &nbsp; | &nbsp;&nbsp;   Legal   | &nbsp;&nbsp;  Privacy | &nbsp;&nbsp; Trademarks </p>
-          
-        </footer>
+          </div>
+          <button class="slider-button next" id="nextBtn"></button>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          This site is not affiliated with or operated by the Trump Organization
+          or ex-"President" &nbsp; Donald J.Trump &nbsp; | &nbsp;&nbsp; Legal |
+          &nbsp;&nbsp; Privacy | &nbsp;&nbsp; Trademarks
+        </p>
+      </footer>
     </main>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const videoGallery = document.querySelector(".video-gallery");
+      document.addEventListener("DOMContentLoaded", function () {
+        const videoGallery = document.getElementById("videoGallery");
+        const mainVideo = document.getElementById("myVideo");
+        const videoPlayer = document.getElementById("videoPlayer");
 
-            videoGallery.addEventListener("mouseenter", function() {
-                videoGallery.classList.add("visible");
-            });
+        let isMouseOverGallery = false;
 
-            videoGallery.addEventListener("mouseleave", function() {
-                videoGallery.classList.remove("visible");
-            });
+        // Show video gallery and shrink main video on mouse move to bottom
+        document.addEventListener("mousemove", function (event) {
+          const y = event.clientY || event.pageY;
+          const windowHeight = window.innerHeight;
+
+          if (y > windowHeight - 100) {
+            videoGallery.classList.add("visible");
+            videoPlayer.classList.add("shrink");
+          } else if (!isMouseOverGallery) {
+            videoGallery.classList.remove("visible");
+            videoPlayer.classList.remove("shrink");
+          }
         });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.getElementById('slider');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const mainVideo = document.getElementById('myVideo');
-            const playButton = document.getElementById('playButton');
-            
-            let slideIndex = 0;
-            const slides = slider.getElementsByTagName('img');
-            const slideCount = slides.length;
-            const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(slides[0]).marginRight);
 
-            function updateSlider() {
-                slider.style.transform = `translateX(-${(slideIndex * slideWidth)}px)`;
-            }
-
-            function nextSlide() {
-                slideIndex = (slideIndex + 1) % slideCount;
-                updateSlider();
-            }
-
-            function prevSlide() {
-                slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-                updateSlider();
-            }
-
-            // Event listeners for manual navigation
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
-
-            // Event listener for keyboard navigation
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'ArrowRight') {
-                    nextSlide();
-                } else if (event.key === 'ArrowLeft') {
-                    prevSlide();
-                }
-            });
-
-            // Event listener for thumbnails
-            Array.from(slides).forEach(slide => {
-                slide.addEventListener('click', function() {
-                    const newVideoSrc = this.getAttribute('data-video');
-                    mainVideo.src = newVideoSrc;
-                    mainVideo.load();
-                    mainVideo.play();
-                });
-            });
-
-            // Video play/pause functionality
-            function togglePlay() {
-                if (mainVideo.paused) {
-                    mainVideo.play();
-                    playButton.style.display = 'none';
-                } else {
-                    mainVideo.pause();
-                    playButton.style.display = 'block';
-                }
-            }
-
-            playButton.addEventListener('click', togglePlay);
-            mainVideo.addEventListener('click', togglePlay);
-
-            mainVideo.addEventListener('play', function() {
-                playButton.style.display = 'none';
-            });
-
-            mainVideo.addEventListener('pause', function() {
-                playButton.style.display = 'block';
-            });
+        // Keep video gallery visible while mouse is over it
+        videoGallery.addEventListener("mouseenter", function () {
+          isMouseOverGallery = true;
+          videoGallery.classList.add("visible");
+          videoPlayer.classList.add("shrink");
         });
+
+        videoGallery.addEventListener("mouseleave", function () {
+          isMouseOverGallery = false;
+          videoGallery.classList.remove("visible");
+          videoPlayer.classList.remove("shrink");
+        });
+
+        // Slider and main video functionality
+        const slider = document.getElementById("slider");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const playButton = document.getElementById("playButton");
+
+        let slideIndex = 0;
+        const slides = slider.getElementsByTagName("img");
+        const slideCount = slides.length;
+        const slideWidth =
+          slides[0].offsetWidth +
+          parseInt(getComputedStyle(slides[0]).marginRight);
+
+        function updateSlider() {
+          slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+        }
+
+        function nextSlide() {
+          slideIndex = (slideIndex + 1) % slideCount;
+          updateSlider();
+        }
+
+        function prevSlide() {
+          slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+          updateSlider();
+        }
+
+        // Event listeners for manual navigation
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        // Event listener for keyboard navigation
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "ArrowRight") {
+            nextSlide();
+          } else if (event.key === "ArrowLeft") {
+            prevSlide();
+          }
+        });
+
+        // Event listener for thumbnails
+        Array.from(slides).forEach((slide) => {
+          slide.addEventListener("click", function () {
+            const newVideoSrc = this.getAttribute("data-video");
+            mainVideo.src = newVideoSrc;
+            mainVideo.load();
+            mainVideo.play();
+          });
+        });
+
+        // Video play/pause functionality
+        function togglePlay() {
+          if (mainVideo.paused) {
+            mainVideo.play();
+            playButton.style.display = "none";
+          } else {
+            mainVideo.pause();
+            playButton.style.display = "block";
+          }
+        }
+
+        playButton.addEventListener("click", togglePlay);
+        mainVideo.addEventListener("click", togglePlay);
+
+        mainVideo.addEventListener("play", function () {
+          playButton.style.display = "none";
+        });
+
+        mainVideo.addEventListener("pause", function () {
+          playButton.style.display = "block";
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
