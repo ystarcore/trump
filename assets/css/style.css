@@ -429,7 +429,7 @@ color: #FFFFFF;
 .slider-button.prev {
     left: 12%;
     border-radius: 50%;
-    background-image: url(../images/left_arrow.png);
+    background-image: url(https://s3.amazonaws.com/trumptv/testvideo/left_arrow.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 30px;
@@ -439,7 +439,7 @@ color: #FFFFFF;
 .slider-button.next {
     right: 12%;
     border-radius: 50%;
-    background-image: url(../images/right_arrow.png);
+    background-image: url(https://s3.amazonaws.com/trumptv/testvideo/right_arrow.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 30px;
