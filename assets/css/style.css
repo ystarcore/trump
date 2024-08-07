@@ -12,12 +12,17 @@
    
 }
 
+a{
+    text-decoration: none;
+}
+
 h1,h2,h3,h4,h5,p{
     margin: 0;
     padding: 0;
 }
 .container{
-    max-width: 1280px !important;
+    /* Removed Important here */
+    max-width: 1280px;    
     width: 100%;
 }
 
@@ -40,7 +45,6 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
 }
 
 /* Header styles */
@@ -53,21 +57,29 @@ header {
 
 
                                 /*----------------------- navbar ---------------------------------*/
-.navbar {
+/* .navbar {
     background-color: #000;
     padding: 10px 0;
+} */
+.header-bg{
+    background-color: black;
 }
-
-.navbar .container {
+p{
+    color: #fff !important;
+}
+.header-bg a{
+    color: #fff !important;
+}
+/* .navbar .container {
     display: flex;
     justify-content: center; 
     align-items: center;
-}
+} */
 
-.navbar-logo {
-    /* margin-right: auto;  */
+/* .navbar-logo {
+    margin-right: auto; 
     margin-left: 20px;
-}
+} */
 .nav_btn{
     font-family: DM Sans;
     font-size: 16px;
@@ -76,23 +88,23 @@ header {
     text-align: left;
     color: white;
 }
-.navbar-logo img {
+/* .navbar-logo img {
     height: 40px;
-}
+} */
 
-.navbar-menu {
+/* .navbar-menu {
     list-style: none;
     display: flex;
     margin: 0; 
     padding: 0; 
-}
+} */
 
-.navbar-menu li {
+/* .navbar-menu li {
     display: inline-block;
     margin: 0;
     padding: 0; 
-}
-.navbar-menu a {
+} */
+/* .navbar-menu a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
@@ -103,7 +115,7 @@ header {
     line-height: 16.8px;
     text-align: left;
 
-}
+} */
 
 .navbar-menu a:hover {
     background-color: #444;
@@ -128,12 +140,12 @@ header {
 
 .video-player {
     position: relative;
-    max-width: 100%;
-}
-
-.video-player img {
     width: 100%;
-    height: auto;
+    max-width: 880px;
+}
+.video-player video {
+    max-width: 100%;
+    border-radius: 24px;
 }
 
 .play-button {
@@ -180,7 +192,7 @@ footer p {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    text-align: left;
+    text-align: center !important;
 
 }
 
@@ -192,7 +204,16 @@ footer p {
     margin-right: -10px;
 }
 .video-gallery{
-        margin-top: -50px;
+        margin-top: 0px;
+        
+}
+.footer-slider{
+    margin-top:0px;
+}
+.footer-slider-wrapper{
+    position: absolute;
+    bottom: 100px !important;
+    left: 0px;
 }
 /* Responsive design */
 @media screen and (max-width: 768px) {
@@ -267,18 +288,19 @@ footer p {
 .slider-button {
     /* background-color: rgba(0, 0, 0, 0.5);
     color: #fff; */
-    background-color: #fff;
-    color: #0000;
+    background-color: #fff ;
+    color: #fff !important;
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 9999999 !important;
+    margin: 0px -50px;
 }
 
 
 main{
     background-image: url(https://s3.amazonaws.com/trumptv/testvideo/home_bg.png);
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -288,15 +310,13 @@ main{
 .her__con{
     max-width: 590px;
 }
-.video-player{
-    width: 100%;
-    max-width: 690px;
-}
+
 .video-gallery {
     opacity: 0;
 }
 .video-gallery.visible {
     opacity: 1;
+
 }
 
 .video-player video {
@@ -310,7 +330,8 @@ main{
     justify-content: center;
 }
 .her__con{
-    padding-top: 15px;
+    padding-top: 25px;
+    padding-left: 10px;
     color: white;
 }
 .her__con h1{
@@ -359,9 +380,12 @@ color: #FFFFFF;
         font-size: 12px;
         line-height: 16px;
     }
+    footer{
+        padding-left: 25px;
+        background: #000;
+    }
 
 }
-
 
 .slider-wrapper {
     position: absolute;
@@ -474,8 +498,8 @@ body, html {
 }
 
 #videoPlayer.shrink {
-    transform: scale(0.7) translateY(-20%);
-    opacity: 0.5;
+    transform: scaleY(0.6) scaleX(0.5) translateY(-20%) translateX(-30%);
+    opacity: 1;
 }
 
 .play-button {
