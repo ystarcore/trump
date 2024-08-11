@@ -202,7 +202,7 @@ footer p {
     padding: 10px;
     padding-right: 0;
     margin-right: -10px;
-    width: 970px;
+    /* width: 970px; */
 }
 .video-gallery{
         margin-top: 0px;
@@ -213,7 +213,7 @@ footer p {
 }
 .footer-slider-wrapper{
     position: absolute;
-    bottom: 100px !important;
+    bottom: 80px !important;
     left: 0px;
 }
 /* Responsive design */
@@ -264,13 +264,16 @@ footer p {
 }
 
 .slider-wrapper {
-    overflow: visible;
+    /* overflow: visible; */
     height: 110px;
     padding: 8px;
     border-radius: 10px; 
-    overflow: hidden; 
+    overflow-x: hidden; 
 }
 
+.mini_wraper{
+    width: 100%;
+}
 .slider {
     display: flex;
     position: relative;
@@ -409,12 +412,12 @@ color: #FFFFFF;
     border-radius: 12px;
     z-index: 2;
     margin: 0 auto;
-    
+    overflow-x: clip;
 }
 .slider img {
     flex: 0 0 auto;
     width: 120px;
-    margin-right: 1.2rem !important;
+    margin-right: .6rem !important;
     object-fit: cover;
     border-radius: 4px;
     z-index: 999;
@@ -434,8 +437,8 @@ color: #FFFFFF;
 
 .slider img {
     flex: 0 0 auto;
-    width: 120px;
-    height: 67px;
+    width: 100px;
+    height: 60px;
     object-fit: cover;
     border-radius: 4px;
 }
@@ -525,11 +528,13 @@ body, html {
 
 .slider img {
     transition: transform 0.5s ease, margin-top 0.6s ease;
+    transform-origin: center;
 }
 
 .slider img:hover {
-    transform: scale(1.2) translateY(-10px);
-    margin-top: -10px;
+    transform: scale(1.12) translateY(-15px);
+    transform-origin: center;
+    margin: 0 1rem 0 .4rem !important;
 }
 
 /* assets/css/style.css */
