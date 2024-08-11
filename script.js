@@ -76,7 +76,11 @@
         Array.from(slides).forEach((slide) => {
           slide.addEventListener("click", function () {
             const newVideoSrc = this.getAttribute("data-video");
+            const newImgSrc = this.getAttribute("src");
+
             mainVideo.src = newVideoSrc;
+            mainVideo.poster = newImgSrc;
+
             mainVideo.load();
             mainVideo.play();
             // Worked here
