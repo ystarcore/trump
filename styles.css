@@ -568,8 +568,6 @@ body, html {
     border-radius: 8px;
     z-index: 1000000;
     margin: 0 auto;
-    opacity: 0;
-    transition: opacity 0.5s ease;
     width: 682px;
     max-height: 50vh;
     gap: 10px !;
