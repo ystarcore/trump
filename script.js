@@ -35,11 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   expandDock.addEventListener("mouseenter", function () {
     expandDock.style.display = '';
+    expandDock.style.opacity = 1;
     document.querySelector('.gallery-container').style.display = 'none';
   });
 
   expandDock.addEventListener("mouseleave", function () {
     expandDock.style.display = 'none';
+    expandDock.style.opacity = 0;
     setTimeout(function () {
       document.querySelector('.gallery-container').style.display = '';
   }, 350); 
