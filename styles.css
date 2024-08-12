@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');         
 
+body {
+    overflow: hidden;
+}
+
 *{
     
     margin: 0; padding: 0;
@@ -9,7 +13,6 @@
     outline: none;
     list-style: none; 
     color: #000000;
-   
 }
 
 a{
@@ -197,20 +200,22 @@ footer p {
 }
 
 .slider{
-
     border-radius: 10px;
     padding: 10px;
     padding-right: 0;
     margin-right: -10px;
-    /* width: 970px; */
+    width: 1260px;
 }
 .video-gallery{
-        margin-top: 0px;
-        
+    margin-top: 0px;
+    margin-top: 0px;
+    margin-top: 0px;
 }
+
 .footer-slider{
     margin-top:0px;
 }
+
 .footer-slider-wrapper{
     position: absolute;
     bottom: 80px !important;
@@ -264,9 +269,8 @@ footer p {
 }
 
 .slider-wrapper {
-    /* overflow: visible; */
     height: 110px;
-    padding: 8px;
+    padding: 6px;
     border-radius: 10px; 
     overflow-x: hidden; 
 }
@@ -300,8 +304,6 @@ footer p {
     z-index: 9999999 !important;
     margin: 0px -50px;
 }
-
-
 main{
     background-image: url(https://s3.amazonaws.com/trumptv/testvideo/home_bg.png);
     background-size: cover;
@@ -409,10 +411,9 @@ color: #FFFFFF;
 .wrapper_main{
     background: linear-gradient(0deg, #94469E, #10143C);
     border: 1px solid #4D2B67;
-    border-radius: 12px;
-    z-index: 2;
+    border-radius: 8px;
+    z-index: 1000000;
     margin: 0 auto;
-    overflow-x: clip;
 }
 .slider img {
     flex: 0 0 auto;
@@ -447,7 +448,7 @@ color: #FFFFFF;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
     color: #fff;
     border: none;
     padding: 10px;
@@ -456,7 +457,7 @@ color: #FFFFFF;
 }
 
 .slider-button.prev {
-    left: 12%;
+    left: 0;
     border-radius: 50%;
     background-image: url(https://s3.amazonaws.com/trumptv/testvideo/left_arrow.png);
     background-repeat: no-repeat;
@@ -466,7 +467,7 @@ color: #FFFFFF;
 }
 
 .slider-button.next {
-    right: 12%;
+    right: 0;
     border-radius: 50%;
     background-image: url(https://s3.amazonaws.com/trumptv/testvideo/right_arrow.png);
     background-repeat: no-repeat;
