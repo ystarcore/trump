@@ -609,6 +609,22 @@ body, html {
 }
 
 
+@keyframes riseUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  .rise-up-fade-in {
+    animation: riseUpFadeIn 0.5s forwards;
+  }
+
+
 /* assets/css/style.css */
 @keyframes fadeIn {
     from {
