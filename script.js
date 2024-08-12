@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     expandDock.style.display = 'none';
     setTimeout(function () {
       document.querySelector('.gallery-container').style.display = '';
-  }, 350); 
+    }, 350);
   });
 
   // Slider and main video functionality
@@ -96,16 +96,19 @@ document.addEventListener("DOMContentLoaded", function () {
       mainVideo.poster = newImgSrc;
 
       mainVideo.load();
+      if (mainVideo.requestFullscreen) {
+        mainVideo.requestFullscreen();
+      }
+      else if (mainVideo.msRequestFullscreen) {
+        mainVideo.msRequestFullscreen();
+      }
+      else if (mainVideo.mozRequestFullScreen) {
+        mainVideo.mozRequestFullScreen();
+      }
+      else if (mainVideo.webkitRequestFullScreen) {
+        mainVideo.webkitRequestFullScreen();
+      }
       mainVideo.play();
-      // Worked here
-      mainVideo.style.height = "92vh";
-      mainVideo.style.width = "1520px";
-      mainVideo.style.marginTop = "-90px";
-      mainVideo.style.marginLeft = "0px";
-      mainVideo.style.marginRight = "0px";
-      mainVideo.style.PaddingRight = "100px";
-      mainVideo.style.zIndex = "3333333";
-      mainVideo.style.backgroundColor = "black";
     });
   });
 
@@ -121,17 +124,19 @@ document.addEventListener("DOMContentLoaded", function () {
       mainVideo.poster = newImgSrc;
 
       mainVideo.load();
+      if (mainVideo.requestFullscreen) {
+        mainVideo.requestFullscreen();
+      }
+      else if (mainVideo.msRequestFullscreen) {
+        mainVideo.msRequestFullscreen();
+      }
+      else if (mainVideo.mozRequestFullScreen) {
+        mainVideo.mozRequestFullScreen();
+      }
+      else if (mainVideo.webkitRequestFullScreen) {
+        mainVideo.webkitRequestFullScreen();
+      }
       mainVideo.play();
-      // Worked here
-      mainVideo.style.height = "92vh";
-      mainVideo.style.width = "1520px";
-      mainVideo.style.marginTop = "-90px";
-      mainVideo.style.marginLeft = "0px";
-      mainVideo.style.marginRight = "0px";
-      mainVideo.style.PaddingRight = "100px";
-      mainVideo.style.zIndex = "3333333";
-      mainVideo.style.backgroundColor = "black";
-
       expandDock.style.display = 'none';
       document.querySelector('.gallery-container').style.display = '';
     });
@@ -154,16 +159,20 @@ document.addEventListener("DOMContentLoaded", function () {
   mainVideo.addEventListener("click", togglePlay);
 
   mainVideo.addEventListener("play", function () {
+    if (mainVideo.requestFullscreen) {
+      mainVideo.requestFullscreen();
+    }
+    else if (mainVideo.msRequestFullscreen) {
+      mainVideo.msRequestFullscreen();
+    }
+    else if (mainVideo.mozRequestFullScreen) {
+      mainVideo.mozRequestFullScreen();
+    }
+    else if (mainVideo.webkitRequestFullScreen) {
+      mainVideo.webkitRequestFullScreen();
+    }
+    mainVideo.play();
     playButton.style.display = "none";
-    mainVideo.style.zIndex = "3333333";
-    mainVideo.style.width = "1560px";
-    mainVideo.style.maxWidth = "1520px";
-
-    mainVideo.style.height = "93vh";
-    mainVideo.style.marginTop = "-90px";
-    mainVideo.style.marginLeft = "-130px";
-    mainVideo.style.paddingRight = "0px";
-    mainVideo.style.background = "black";
   });
 
   mainVideo.addEventListener("pause", function () {
@@ -172,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  document.getElementById('moreBtn').addEventListener('click', function() {
+  document.getElementById('moreBtn').addEventListener('click', function () {
     document.querySelector('.gallery-container').style.display = 'none';
     expandDock.style.display = 'block';
   });
