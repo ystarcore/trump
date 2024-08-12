@@ -414,6 +414,7 @@ color: #FFFFFF;
     border-radius: 8px;
     z-index: 1000000;
     margin: 0 auto;
+    overflow-x: clip;
 }
 .slider img {
     flex: 0 0 auto;
@@ -489,13 +490,15 @@ body, html {
 
 .video-gallery {
     opacity: 0;
-    transform: translateY(100%);
+    background-color: transparent;
+    /* transform: translateY(100%); */
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .video-gallery.visible {
     opacity: 1;
-    transform: translateY(0);
+    /* transform: translateY(0); */
+    background-color: transparent;
 }
 
 #videoPlayer {
@@ -538,6 +541,74 @@ body, html {
     margin: 0 1rem 0 .4rem !important;
 }
 
+#moreBtn {
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    bottom: 70px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#moreBtn img{
+    width: 28px;
+    height: 28px;
+    transition: all 0.3s ease;
+}
+
+#moreBtn:hover img{
+    width: 32px;
+    height: 32px;
+    transform: scale(1.15);
+}
+
+.expand-dock{
+    background: linear-gradient(0deg, #94469E, #10143C);
+    border: 1px solid #4D2B67;
+    border-radius: 8px;
+    z-index: 1000000;
+    margin: 0 auto;
+    width: 682px;
+    max-height: 50vh;
+    gap: 10px !;
+    overflow-y: scroll;
+    margin-bottom: 44px;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    scrollbar-width: none;
+}
+
+.expand-dock::-webkit-scrollbar {
+    display: none; 
+}
+
+.expand-dock img {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    z-index: 999;
+    border: #f4f4f4 solid 1px;
+    opacity: 0.8;
+    transition: transform 0.5s ease, margin-top 0.6s ease;
+    transform-origin: center;
+}
+.expand-dock img:hover {
+    opacity: 1;
+    border: #f4f4f4 solid 2px;
+    transform: scale(1.04) translateY(-20px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 999;
+
+    transform: scale(1.12);
+    transform-origin: center;
+}
+
+
 /* assets/css/style.css */
 @keyframes fadeIn {
     from {
@@ -572,3 +643,4 @@ body, html {
         font-size: 14px;
     }
 }
+

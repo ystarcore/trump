@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const videoGallery = document.getElementById("videoGallery");
   const mainVideo = document.getElementById("myVideo");
   const videoPlayer = document.getElementById("videoPlayer");
+  const expandDock = document.querySelector('.expand-dock');
 
   let isMouseOverGallery = false;
 
@@ -32,6 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
     videoPlayer.classList.remove("shrink");
   });
 
+  expandDock.addEventListener("mouseenter", function () {
+    expandDock.style.display = '';
+    document.querySelector('.gallery-container').style.display = 'none';
+  });
+
+  expandDock.addEventListener("mouseleave", function () {
+    expandDock.style.display = 'none';
+    setTimeout(function () {
+      document.querySelector('.gallery-container').style.display = '';
+  }, 350); 
+  });
+
   // Slider and main video functionality
   const slider = document.getElementById("slider");
   const prevBtn = document.getElementById("prevBtn");
@@ -40,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let slideIndex = 0;
   const slides = slider.getElementsByTagName("img");
+  const dockSlides = expandDock.getElementsByTagName("img");
   const slideCount = slides.length;
   const slideWidth =
     slides[0].offsetWidth +
@@ -95,6 +109,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
+  // dockSlides
+  // Event listener for thumbnails
+  Array.from(dockSlides).forEach((slide) => {
+    slide.addEventListener("click", function () {
+      const newVideoSrc = this.getAttribute("data-video");
+      const newImgSrc = this.getAttribute("src");
+
+      mainVideo.src = newVideoSrc;
+      mainVideo.poster = newImgSrc;
+
+      mainVideo.load();
+      mainVideo.play();
+      // Worked here
+      mainVideo.style.height = "92vh";
+      mainVideo.style.width = "1520px";
+      mainVideo.style.marginTop = "-90px";
+      mainVideo.style.marginLeft = "0px";
+      mainVideo.style.marginRight = "0px";
+      mainVideo.style.PaddingRight = "100px";
+      mainVideo.style.zIndex = "3333333";
+      mainVideo.style.backgroundColor = "black";
+
+      expandDock.style.display = 'none';
+      document.querySelector('.gallery-container').style.display = '';
+    });
+  });
+
   // Video play/pause functionality
   function togglePlay() {
     if (mainVideo.paused) {
@@ -127,5 +169,11 @@ document.addEventListener("DOMContentLoaded", function () {
   mainVideo.addEventListener("pause", function () {
     playButton.style.display = "block";
     mainVideo.style.zIndex = "3333333";
+  });
+
+
+  document.getElementById('moreBtn').addEventListener('click', function() {
+    document.querySelector('.gallery-container').style.display = 'none';
+    expandDock.style.display = 'block';
   });
 });
