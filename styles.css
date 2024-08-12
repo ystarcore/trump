@@ -621,7 +621,7 @@ body, html {
   }
   
   .rise-up-fade-in {
-    animation: riseUpFadeIn 0.5s forwards;
+    animation: riseUpFadeIn 1s forwards;
   }
 
 
